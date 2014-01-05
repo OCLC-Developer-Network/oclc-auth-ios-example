@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F5564E517DF6B0600979912 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5564E417DF6B0600979912 /* UIKit.framework */; };
+		5F5564E717DF6B0600979912 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5564E617DF6B0600979912 /* Foundation.framework */; };
+		5F5564E917DF6B0600979912 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5564E817DF6B0600979912 /* CoreGraphics.framework */; };
+		5F5564EF17DF6B0600979912 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F5564ED17DF6B0600979912 /* InfoPlist.strings */; };
+		5F5564F117DF6B0600979912 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5564F017DF6B0600979912 /* main.m */; };
+		5F5564F517DF6B0600979912 /* OCLC_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5564F417DF6B0600979912 /* OCLC_AppDelegate.m */; };
+		5F5564FE17DF6B0600979912 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5564FC17DF6B0600979912 /* MainStoryboard_iPhone.storyboard */; };
+		5F55650117DF6B0600979912 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5564FF17DF6B0600979912 /* MainStoryboard_iPad.storyboard */; };
+		5F55650417DF6B0600979912 /* OCLC_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F55650317DF6B0600979912 /* OCLC_ViewController.m */; };
+		5F55650C17DF6B0600979912 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F55650B17DF6B0600979912 /* SenTestingKit.framework */; };
+		5F55650D17DF6B0600979912 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5564E417DF6B0600979912 /* UIKit.framework */; };
+		5F55650E17DF6B0600979912 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5564E617DF6B0600979912 /* Foundation.framework */; };
+		5F55651617DF6B0600979912 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F55651417DF6B0600979912 /* InfoPlist.strings */; };
+		5F55651917DF6B0600979912 /* OCLC_AuthenticationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F55651817DF6B0600979912 /* OCLC_AuthenticationTests.m */; };
+		5F55652417DF6BDE00979912 /* OCLC_AuthenticationUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F55652317DF6BDE00979912 /* OCLC_AuthenticationUIWebView.m */; };
+		5F6A65D517E348BD00981FE8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65D417E348BD00981FE8 /* Default.png */; };
+		5F6A65D717E348C300981FE8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65D617E348C300981FE8 /* Default@2x.png */; };
+		5F6A65D917E348C900981FE8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65D817E348C900981FE8 /* Default-568h@2x.png */; };
+		5F6A65E317E349AE00981FE8 /* Oclc_57_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65E217E349AE00981FE8 /* Oclc_57_57.png */; };
+		5F6A65E517E349B300981FE8 /* Oclc_114_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65E417E349B300981FE8 /* Oclc_114_114.png */; };
+		5F6A65E717E349BC00981FE8 /* Oclc_72_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65E617E349BC00981FE8 /* Oclc_72_72.png */; };
+		5F6A65E917E349C000981FE8 /* Oclc_144_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F6A65E817E349C000981FE8 /* Oclc_144_144.png */; };
+		5F80F08817F0758C0068C7DF /* authenticationList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F80F08717F0758C0068C7DF /* authenticationList.plist */; };
+		5FB5D73318774DB000CAB98D /* authenticationListLocal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FB5D73218774DB000CAB98D /* authenticationListLocal.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F55650F17DF6B0600979912 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F5564D917DF6B0600979912 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F5564E017DF6B0600979912;
+			remoteInfo = "OCLC Authentication";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F5564E117DF6B0600979912 /* OCLC Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OCLC Authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5564E417DF6B0600979912 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5F5564E617DF6B0600979912 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F5564E817DF6B0600979912 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5F5564EC17DF6B0600979912 /* OCLC Authentication-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCLC Authentication-Info.plist"; sourceTree = "<group>"; };
+		5F5564EE17DF6B0600979912 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F5564F017DF6B0600979912 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F5564F217DF6B0600979912 /* OCLC Authentication-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCLC Authentication-Prefix.pch"; sourceTree = "<group>"; };
+		5F5564F317DF6B0600979912 /* OCLC_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLC_AppDelegate.h; sourceTree = "<group>"; };
+		5F5564F417DF6B0600979912 /* OCLC_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLC_AppDelegate.m; sourceTree = "<group>"; };
+		5F5564F617DF6B0600979912 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5F5564F817DF6B0600979912 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5F5564FA17DF6B0600979912 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5F5564FD17DF6B0600979912 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		5F55650017DF6B0600979912 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		5F55650217DF6B0600979912 /* OCLC_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLC_ViewController.h; sourceTree = "<group>"; };
+		5F55650317DF6B0600979912 /* OCLC_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLC_ViewController.m; sourceTree = "<group>"; };
+		5F55650A17DF6B0600979912 /* OCLC AuthenticationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OCLC AuthenticationTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F55650B17DF6B0600979912 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5F55651317DF6B0600979912 /* OCLC AuthenticationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OCLC AuthenticationTests-Info.plist"; sourceTree = "<group>"; };
+		5F55651517DF6B0600979912 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5F55651717DF6B0600979912 /* OCLC_AuthenticationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCLC_AuthenticationTests.h; sourceTree = "<group>"; };
+		5F55651817DF6B0600979912 /* OCLC_AuthenticationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCLC_AuthenticationTests.m; sourceTree = "<group>"; };
+		5F55652217DF6BDE00979912 /* OCLC_AuthenticationUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCLC_AuthenticationUIWebView.h; sourceTree = "<group>"; };
+		5F55652317DF6BDE00979912 /* OCLC_AuthenticationUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCLC_AuthenticationUIWebView.m; sourceTree = "<group>"; };
+		5F6A65D417E348BD00981FE8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5F6A65D617E348C300981FE8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5F6A65D817E348C900981FE8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5F6A65E217E349AE00981FE8 /* Oclc_57_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Oclc_57_57.png; sourceTree = "<group>"; };
+		5F6A65E417E349B300981FE8 /* Oclc_114_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Oclc_114_114.png; sourceTree = "<group>"; };
+		5F6A65E617E349BC00981FE8 /* Oclc_72_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Oclc_72_72.png; sourceTree = "<group>"; };
+		5F6A65E817E349C000981FE8 /* Oclc_144_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Oclc_144_144.png; sourceTree = "<group>"; };
+		5F80F08717F0758C0068C7DF /* authenticationList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = authenticationList.plist; sourceTree = "<group>"; };
+		5FB5D73218774DB000CAB98D /* authenticationListLocal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = authenticationListLocal.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F5564DE17DF6B0600979912 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5564E517DF6B0600979912 /* UIKit.framework in Frameworks */,
+				5F5564E717DF6B0600979912 /* Foundation.framework in Frameworks */,
+				5F5564E917DF6B0600979912 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F55650617DF6B0600979912 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F55650C17DF6B0600979912 /* SenTestingKit.framework in Frameworks */,
+				5F55650D17DF6B0600979912 /* UIKit.framework in Frameworks */,
+				5F55650E17DF6B0600979912 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F5564D817DF6B0600979912 = {
+			isa = PBXGroup;
+			children = (
+				5F6A65E817E349C000981FE8 /* Oclc_144_144.png */,
+				5F6A65E617E349BC00981FE8 /* Oclc_72_72.png */,
+				5F6A65E417E349B300981FE8 /* Oclc_114_114.png */,
+				5F6A65E217E349AE00981FE8 /* Oclc_57_57.png */,
+				5F6A65D817E348C900981FE8 /* Default-568h@2x.png */,
+				5F6A65D617E348C300981FE8 /* Default@2x.png */,
+				5F6A65D417E348BD00981FE8 /* Default.png */,
+				5F5564EA17DF6B0600979912 /* OCLC Authentication */,
+				5F55651117DF6B0600979912 /* OCLC AuthenticationTests */,
+				5F5564E317DF6B0600979912 /* Frameworks */,
+				5F5564E217DF6B0600979912 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F5564E217DF6B0600979912 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F5564E117DF6B0600979912 /* OCLC Authentication.app */,
+				5F55650A17DF6B0600979912 /* OCLC AuthenticationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F5564E317DF6B0600979912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5564E417DF6B0600979912 /* UIKit.framework */,
+				5F5564E617DF6B0600979912 /* Foundation.framework */,
+				5F5564E817DF6B0600979912 /* CoreGraphics.framework */,
+				5F55650B17DF6B0600979912 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F5564EA17DF6B0600979912 /* OCLC Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				5F5564F317DF6B0600979912 /* OCLC_AppDelegate.h */,
+				5F5564F417DF6B0600979912 /* OCLC_AppDelegate.m */,
+				5F5564FC17DF6B0600979912 /* MainStoryboard_iPhone.storyboard */,
+				5F5564FF17DF6B0600979912 /* MainStoryboard_iPad.storyboard */,
+				5F55650217DF6B0600979912 /* OCLC_ViewController.h */,
+				5F55650317DF6B0600979912 /* OCLC_ViewController.m */,
+				5F5564EB17DF6B0600979912 /* Supporting Files */,
+				5F55652217DF6BDE00979912 /* OCLC_AuthenticationUIWebView.h */,
+				5F55652317DF6BDE00979912 /* OCLC_AuthenticationUIWebView.m */,
+				5F80F08717F0758C0068C7DF /* authenticationList.plist */,
+				5FB5D73218774DB000CAB98D /* authenticationListLocal.plist */,
+			);
+			path = "OCLC Authentication";
+			sourceTree = "<group>";
+		};
+		5F5564EB17DF6B0600979912 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F5564EC17DF6B0600979912 /* OCLC Authentication-Info.plist */,
+				5F5564ED17DF6B0600979912 /* InfoPlist.strings */,
+				5F5564F017DF6B0600979912 /* main.m */,
+				5F5564F217DF6B0600979912 /* OCLC Authentication-Prefix.pch */,
+				5F5564F617DF6B0600979912 /* Default.png */,
+				5F5564F817DF6B0600979912 /* Default@2x.png */,
+				5F5564FA17DF6B0600979912 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F55651117DF6B0600979912 /* OCLC AuthenticationTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F55651717DF6B0600979912 /* OCLC_AuthenticationTests.h */,
+				5F55651817DF6B0600979912 /* OCLC_AuthenticationTests.m */,
+				5F55651217DF6B0600979912 /* Supporting Files */,
+			);
+			path = "OCLC AuthenticationTests";
+			sourceTree = "<group>";
+		};
+		5F55651217DF6B0600979912 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F55651317DF6B0600979912 /* OCLC AuthenticationTests-Info.plist */,
+				5F55651417DF6B0600979912 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F5564E017DF6B0600979912 /* OCLC Authentication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F55651C17DF6B0600979912 /* Build configuration list for PBXNativeTarget "OCLC Authentication" */;
+			buildPhases = (
+				5F5564DD17DF6B0600979912 /* Sources */,
+				5F5564DE17DF6B0600979912 /* Frameworks */,
+				5F5564DF17DF6B0600979912 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OCLC Authentication";
+			productName = "OCLC Authentication";
+			productReference = 5F5564E117DF6B0600979912 /* OCLC Authentication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F55650917DF6B0600979912 /* OCLC AuthenticationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F55651F17DF6B0600979912 /* Build configuration list for PBXNativeTarget "OCLC AuthenticationTests" */;
+			buildPhases = (
+				5F55650517DF6B0600979912 /* Sources */,
+				5F55650617DF6B0600979912 /* Frameworks */,
+				5F55650717DF6B0600979912 /* Resources */,
+				5F55650817DF6B0600979912 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F55651017DF6B0600979912 /* PBXTargetDependency */,
+			);
+			name = "OCLC AuthenticationTests";
+			productName = "OCLC AuthenticationTests";
+			productReference = 5F55650A17DF6B0600979912 /* OCLC AuthenticationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F5564D917DF6B0600979912 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OCLC_;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = George;
+			};
+			buildConfigurationList = 5F5564DC17DF6B0600979912 /* Build configuration list for PBXProject "OCLC Authentication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F5564D817DF6B0600979912;
+			productRefGroup = 5F5564E217DF6B0600979912 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F5564E017DF6B0600979912 /* OCLC Authentication */,
+				5F55650917DF6B0600979912 /* OCLC AuthenticationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F5564DF17DF6B0600979912 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5564EF17DF6B0600979912 /* InfoPlist.strings in Resources */,
+				5F5564FE17DF6B0600979912 /* MainStoryboard_iPhone.storyboard in Resources */,
+				5FB5D73318774DB000CAB98D /* authenticationListLocal.plist in Resources */,
+				5F55650117DF6B0600979912 /* MainStoryboard_iPad.storyboard in Resources */,
+				5F6A65D517E348BD00981FE8 /* Default.png in Resources */,
+				5F6A65D717E348C300981FE8 /* Default@2x.png in Resources */,
+				5F6A65D917E348C900981FE8 /* Default-568h@2x.png in Resources */,
+				5F6A65E317E349AE00981FE8 /* Oclc_57_57.png in Resources */,
+				5F6A65E517E349B300981FE8 /* Oclc_114_114.png in Resources */,
+				5F6A65E717E349BC00981FE8 /* Oclc_72_72.png in Resources */,
+				5F6A65E917E349C000981FE8 /* Oclc_144_144.png in Resources */,
+				5F80F08817F0758C0068C7DF /* authenticationList.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F55650717DF6B0600979912 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F55651617DF6B0600979912 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F55650817DF6B0600979912 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F5564DD17DF6B0600979912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5564F117DF6B0600979912 /* main.m in Sources */,
+				5F5564F517DF6B0600979912 /* OCLC_AppDelegate.m in Sources */,
+				5F55650417DF6B0600979912 /* OCLC_ViewController.m in Sources */,
+				5F55652417DF6BDE00979912 /* OCLC_AuthenticationUIWebView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F55650517DF6B0600979912 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F55651917DF6B0600979912 /* OCLC_AuthenticationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F55651017DF6B0600979912 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F5564E017DF6B0600979912 /* OCLC Authentication */;
+			targetProxy = 5F55650F17DF6B0600979912 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F5564ED17DF6B0600979912 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F5564EE17DF6B0600979912 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5F5564FC17DF6B0600979912 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F5564FD17DF6B0600979912 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5F5564FF17DF6B0600979912 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F55650017DF6B0600979912 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5F55651417DF6B0600979912 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F55651517DF6B0600979912 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F55651A17DF6B0600979912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F55651B17DF6B0600979912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F55651D17DF6B0600979912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCLC Authentication/OCLC Authentication-Prefix.pch";
+				INFOPLIST_FILE = "OCLC Authentication/OCLC Authentication-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5F55651E17DF6B0600979912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: George Campbell (CW6NQT7QVM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Campbell (CW6NQT7QVM)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCLC Authentication/OCLC Authentication-Prefix.pch";
+				INFOPLIST_FILE = "OCLC Authentication/OCLC Authentication-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5F55652017DF6B0600979912 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OCLC Authentication.app/OCLC Authentication";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCLC Authentication/OCLC Authentication-Prefix.pch";
+				INFOPLIST_FILE = "OCLC AuthenticationTests/OCLC AuthenticationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5F55652117DF6B0600979912 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OCLC Authentication.app/OCLC Authentication";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCLC Authentication/OCLC Authentication-Prefix.pch";
+				INFOPLIST_FILE = "OCLC AuthenticationTests/OCLC AuthenticationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F5564DC17DF6B0600979912 /* Build configuration list for PBXProject "OCLC Authentication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F55651A17DF6B0600979912 /* Debug */,
+				5F55651B17DF6B0600979912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F55651C17DF6B0600979912 /* Build configuration list for PBXNativeTarget "OCLC Authentication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F55651D17DF6B0600979912 /* Debug */,
+				5F55651E17DF6B0600979912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F55651F17DF6B0600979912 /* Build configuration list for PBXNativeTarget "OCLC AuthenticationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F55652017DF6B0600979912 /* Debug */,
+				5F55652117DF6B0600979912 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F5564D917DF6B0600979912 /* Project object */;
+}
