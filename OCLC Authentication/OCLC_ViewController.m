@@ -29,7 +29,7 @@
     OCLC_AuthenticationUIWebView *authenticationWebView;
     
     // Boolean to keep track of whether the access token is valid or not.
-    BOOL isAccessTokenValidButton;
+    BOOL isAccessTokenValid;
     
     // Buttons added to the screen
     UIButton *clearCookiesButton;
@@ -57,51 +57,67 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     // Add "Clear Cookies" button.
     clearCookiesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
     [clearCookiesButton addTarget:self
-                        action:@selector(handleClearCookiesButton:)
-                        forControlEvents:UIControlEventTouchUpInside];
+                           action:@selector(handleClearCookiesButton:)
+                 forControlEvents:UIControlEventTouchUpInside];
+    
     [clearCookiesButton setTitle:@"Clear Cookies"
                         forState: UIControlStateNormal];
+    
     clearCookiesButton.frame =
-        CGRectMake(10,self.view.frame.size.height-54,125,44);
+    CGRectMake(10,self.view.frame.size.height-54,125,44);
     [self.view addSubview:clearCookiesButton];
     
     // Add "Sign In Again" button.
     signInAgainButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
     [signInAgainButton addTarget:self
-                       action:@selector(handleSignInAgainButton:)
-                       forControlEvents:UIControlEventTouchUpInside];
+                          action:@selector(handleSignInAgainButton:)
+                forControlEvents:UIControlEventTouchUpInside];
+    
     [signInAgainButton setTitle:@"Sign In Again"
                        forState: UIControlStateNormal];
+    
     signInAgainButton.frame =
-      CGRectMake(self.view.frame.size.width-135,
-                 self.view.frame.size.height-54,125,44);
+    CGRectMake(self.view.frame.size.width-135,
+               self.view.frame.size.height-54,125,44);
+    
     [self.view addSubview:signInAgainButton];
     
     // Add Token Expiration label.
-    accessTokenTimeRemainingLabel = [[UILabel alloc]
-        initWithFrame:CGRectMake(18, self.view.frame.size.height-86, 283, 21)];
+    accessTokenTimeRemainingLabel =
+    [[UILabel alloc]
+     initWithFrame:CGRectMake(18, self.view.frame.size.height-86, 283, 21)];
+    
     [accessTokenTimeRemainingLabel
-        setFont:[UIFont fontWithName:@"Courier New" size:13.0f]];
+     setFont:[UIFont fontWithName:@"Courier New" size:13.0f]];
+    
     [accessTokenTimeRemainingLabel setTextColor:[UIColor blackColor]];
+    
     [accessTokenTimeRemainingLabel
-        setText: @"Access Token Time Remaining: expired"];
+     setText: @"Access Token Time Remaining: expired"];
+    
     [self.view addSubview:accessTokenTimeRemainingLabel];
     
     // Add activity spinner.
-    activityIndicator = [[UIActivityIndicatorView alloc]
-        initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityIndicator =
+    [[UIActivityIndicatorView alloc]
+     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     activityIndicator.frame =CGRectMake(self.view.frame.size.width/2-25,
                                         self.view.frame.size.height/2-50,50,50);
+    
     activityIndicator.color = [UIColor grayColor];
+    
     [activityIndicator startAnimating];
     
     // Execute the authentication.
-    isAccessTokenValidButton = NO;
+    isAccessTokenValid = NO;
+    
     [self authenticate];
 }
 
@@ -123,7 +139,7 @@
 - (void)authenticate {
     // Get the path to the authentication parameters file
     NSString *plistCatPath = [[NSBundle mainBundle]
-                        pathForResource:@"authenticationList" ofType:@"plist"];
+                              pathForResource:@"authenticationList" ofType:@"plist"];
     
     // Load the authentication parameters into _requestParameters.
     _requestParameters = [[NSDictionary alloc]
@@ -140,13 +156,14 @@
         [_requestParameters[@"scope"] isEqualToString:@""]) {
         
         [self displayNoAuthenticationParametersMessage];
-    
+        
     } else {
         
         // Create our custom UIWebView so that it fills the iPhone screen.
         authenticationWebView = [[OCLC_AuthenticationUIWebView alloc]
-                                 initWithFrame:CGRectMake(0, 20, self.view.frame.size.width,
-                                                          self.view.frame.size.height-100)];
+                                 initWithFrame:CGRectMake
+                                 (0, 20, self.view.frame.size.width,
+                                  self.view.frame.size.height-100)];
         
         // Our custom UIWebView has a delegate so that it can tell this class that
         // it is done authenticating.
@@ -154,7 +171,7 @@
         
         // Add our custom UIWebView to this view controllers screen.
         [self.view addSubview:authenticationWebView];
-
+        
         // Make the token request.
         [authenticationWebView getToken:_requestParameters];
     }
@@ -171,8 +188,8 @@
  *           were returned on the redirect URI.
  */
 - (void)authenticatedSuccess:(BOOL)success
-      result:(NSMutableDictionary *)result {
-      NSLog(@"\n\n%c\n%@\n\n",success,result);
+                      result:(NSMutableDictionary *)result {
+    NSLog(@"\n\n%c\n%@\n\n",success,result);
     
     _resultParameters = result;
     
@@ -181,7 +198,7 @@
     if ([result objectForKey:@"expires_in"] != nil) {
         
         accessTokenTimeRemaining =
-            [[result objectForKey:@"expires_in"] floatValue];
+        [[result objectForKey:@"expires_in"] floatValue];
         
         // Make sure the timer wasn't already defined. If so, null it out.
         if (accessTokenExpirationTimer.isValid) {
@@ -194,14 +211,14 @@
         accessTokenExpirationTimer = [NSTimer
                                       scheduledTimerWithTimeInterval:1.0
                                       target:self
-                                  selector:@selector(decrementAccessTokenTimer:)
+                                      selector:@selector(decrementAccessTokenTimer:)
                                       userInfo:nil
                                       repeats:YES];
         
         // If no token time remaining was sent, display a "n/a" message
     } else {
         [accessTokenTimeRemainingLabel
-             setText: @"Error in Authentication Process"];
+         setText: @"Error in Authentication Process"];
     }
     
     // Dispose of the custom UIWebView.
@@ -213,10 +230,11 @@
     // Create the resultParametersLabel if it does not exist
     if (resultParametersLabel == nil) {
         resultParametersLabel = [[UILabel alloc]
-            initWithFrame:CGRectMake(10, 20, self.view.frame.size.width - 20,
-                                     self.view.frame.size.height - 100)];
+                                 initWithFrame:CGRectMake
+                                 (10, 20, self.view.frame.size.width - 20,
+                                  self.view.frame.size.height - 100)];
         [resultParametersLabel
-            setFont:[UIFont fontWithName:@"Courier New" size:11.0f]];
+         setFont:[UIFont fontWithName:@"Courier New" size:11.0f]];
         [resultParametersLabel setTextColor:[UIColor blackColor]];
         resultParametersLabel.numberOfLines=20;
         [self.view addSubview:resultParametersLabel];
@@ -225,12 +243,12 @@
     // Display the result parameters on the iPhone screen.
     if (success) {
         resultParametersLabel.text =
-            [NSString stringWithFormat:@"SUCCESS\n%@",result];
-        isAccessTokenValidButton = YES;
+        [NSString stringWithFormat:@"SUCCESS\n%@",result];
+        isAccessTokenValid = YES;
     } else {
         resultParametersLabel.text =
-            [NSString stringWithFormat:@"FAILURE\n%@",result];
-        isAccessTokenValidButton = NO;
+        [NSString stringWithFormat:@"FAILURE\n%@",result];
+        isAccessTokenValid = NO;
     }
     
 }
@@ -276,13 +294,13 @@
     
     if (accessTokenTimeRemaining < 0) {
         [accessTokenTimeRemainingLabel
-            setText: @"Access Token Time Remaining: expired"];
+         setText: @"Access Token Time Remaining: expired"];
         [accessTokenExpirationTimer invalidate];
-        isAccessTokenValidButton = NO;
+        isAccessTokenValid = NO;
     } else {
         [accessTokenTimeRemainingLabel setText:
          [NSString stringWithFormat:@"Access Token Time Remaining: %d",
-                                    (int)accessTokenTimeRemaining]];
+          (int)accessTokenTimeRemaining]];
     }
 }
 
@@ -311,8 +329,9 @@
 - (void) displayNoAuthenticationParametersMessage {
     if (resultParametersLabel == nil) {
         resultParametersLabel = [[UILabel alloc]
-                                 initWithFrame:CGRectMake(10, 20, self.view.frame.size.width - 20,
-                                                          self.view.frame.size.height - 100)];
+                                 initWithFrame:CGRectMake
+                                 (10, 20, self.view.frame.size.width - 20,
+                                  self.view.frame.size.height - 100)];
         [resultParametersLabel
          setFont:[UIFont fontWithName:@"Courier New" size:11.0f]];
         [resultParametersLabel setTextColor:[UIColor blackColor]];
