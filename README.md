@@ -4,7 +4,7 @@ This sample iOS Application demonstrates how to authenticate an OCLC user to obt
 
 A use case would be to allow a library patron to view their checked out items, place holds or renew materials on an iPhone or iPad.
 
-A tutorial explaining this application's code in detail <a>is available here</a>.
+A tutorial explaining this application's code in detail <a href="http://oclc.org/developer/news/tutorial-mobile-authentication-ios">is available here</a>.
 
 ## Installation
 
@@ -121,4 +121,4 @@ client_id={a valid wskey}
 }
 </pre>
 </li>
-<li>The refresh token can then be used to request an access token, as described in the <a href="http://www.oclc.org/developer/news/authentication-and-authorization-refresh-tokens">developer network documentation</a>.</li>
+<li>The refresh token can then be used to request an access token, as described in the <a href="http://www.oclc.org/developer/news/authentication-and-authorization-refresh-tokens">OCLC Developer Network documentation</a>.</li>
