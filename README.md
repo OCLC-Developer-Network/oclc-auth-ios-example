@@ -1,4 +1,4 @@
-# OCLC iOS Authentication Example
+# OCLC Mobile Authentication iOS App Example
 
 This sample iOS Application demonstrates how to authenticate an OCLC user to obtain an access token. 
 
